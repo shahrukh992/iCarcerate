@@ -1,0 +1,15 @@
+<button style='float:left' (click)="goBack()">Back</button>
+<div *ngIf="prisoner" class="window">
+  <h2>{{prisoner.name}} details:</h2>
+  <div><label>id: </label>{{prisoner.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="prisoner.name" placeholder="name"/>
+    <div>Release Date:{{prisoner.releaseDate}} Sex: {{prisoner.sex}}<br>
+    Race: {{prisoner.race}}<br>
+    Age: {{prisoner.age}}<br>
+    Jacket Number: {{prisoner.jacket}}
+    </div>
+  </div>
+</div>
+

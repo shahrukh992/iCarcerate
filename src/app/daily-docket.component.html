@@ -1,0 +1,10 @@
+<h1>Daily Docket</h1>
+    <div *ngIf="selectedPrisoner">
+  <h2>
+    {{selectedPrisoner.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<ul class="prisoners">
+<li *ngFor="let prisoner of prisoners"><a [routerLink]="['/detail', prisoner.id]"> <span class="badge">{{prisoner.id}}</span> {{prisoner.name}} </a><li>
+</ul>
